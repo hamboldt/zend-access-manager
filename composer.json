@@ -1,0 +1,20 @@
+{
+  "name": "hamboldt/zend-access-manager",
+  "description": "Access management structure for Zend Framework 2 with page construction strategies and page access control for different roles",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lucas Andrade de Araujo",
+      "email": "lucasdearaujo88@gmail.com"
+    }
+  ],
+  "autoload":{
+    "psr-4": {"ZendAccessManager\\": "src/ZendAccessManager"}
+  },
+  "require": {
+    "easyframework/collections": "v4.0.0",
+    "zendframework/zend-db": "2.5.1",
+    "zendframework/zend-session": "2.5.2"
+  }
+}

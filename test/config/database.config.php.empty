@@ -1,0 +1,15 @@
+<?php
+
+// Exemplo que deve ser seguido para configuração
+// do banco de dados para execução dos testes unitários.
+GlobalAdapterFeature::setStaticAdapter(
+    new Adapter(array(
+        'driver'   => 'Mysqli',
+        'hostname' => '',
+        'database' => '',
+        'username' => '',
+        'password' => '',
+        'charset'  => 'utf8',
+        'options'  => array('buffer_results' => true)
+    ))
+);
