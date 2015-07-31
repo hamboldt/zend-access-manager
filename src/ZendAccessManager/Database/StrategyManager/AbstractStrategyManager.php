@@ -24,12 +24,12 @@ abstract class AbstractStrategyManager implements StrategyManagerInterface
      */
     public function __construct()
     {
+        // Cria uma nova coleção de estratégias
+        $this->strategyCollection = new ArrayList();
+
         // Executa configuração das estratégias. Nesse trecho de código
         // Irá ser colocadas no sistema, todas as estratégias utilizadas.
         $this->setUpStrategies();
-
-        // Cria uma nova coleção de estratégias
-        $this->strategyCollection = new ArrayList();
     }
 
     /**
@@ -59,6 +59,6 @@ abstract class AbstractStrategyManager implements StrategyManagerInterface
      */
     public function setStrategy($name, DataAccessStrategyInterface $d)
     {
-        $this->getStrategyCollection()->insert($name, $d);
+        $this->getStrategyCollection()->add($d);
     }
 }
