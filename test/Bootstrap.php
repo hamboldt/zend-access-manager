@@ -1,4 +1,9 @@
 <?php
 
+// Carrega as dependências construídas pelo
+// autoloader do composer.
 require "../vendor/autoload.php";
-require "/config/database.config.php";
+
+// É necessário criar o arquivo corretamente
+// seguindo o padrão do arquivo de demonstração.
+require "config/database.config.php";
