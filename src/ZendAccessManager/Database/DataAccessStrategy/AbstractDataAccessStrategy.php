@@ -9,7 +9,7 @@ use Zend\Db\TableGateway\TableGatewayInterface;
  * @author  Lucas A. de Araújo <lucas@painapp.com.br>
  * @package ZendAccessManager\Database\DataAccess
  */
-abstract class AbstractDataAccessStrategy implements DataAccessInterface
+abstract class AbstractDataAccessStrategy implements DataAccessStrategyInterface
 {
     /**
      * @var TableGatewayInterface

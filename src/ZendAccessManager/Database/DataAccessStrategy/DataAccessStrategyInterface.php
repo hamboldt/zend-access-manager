@@ -2,6 +2,8 @@
 
 namespace ZendAccessManager\Database\DataAccessStrategy;
 
+use Zend\Db\TableGateway\TableGatewayInterface;
+
 /**
  * Interface DataAccessInterface
  * @author  Lucas A. de Araújo <lucas@painapp.com.br>
