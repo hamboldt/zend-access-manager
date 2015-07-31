@@ -1,7 +1,7 @@
 # zend-access-manager
 Access management system for Zend Framework 2 with page construction strategies and page access control for different roles
 
-### Database Access Configuration
+### Configuração de acesso a dados
 
 ```php
 <?php
