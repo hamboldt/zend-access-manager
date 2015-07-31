@@ -3,6 +3,7 @@
 namespace ZendAccessManager\Database\StrategyManager;
 
 use Collections\ArrayList;
+use ZendAccessManager\Database\DataAccessStrategy\DataAccessStrategyInterface;
 
 /**
  * Class AbstractStrategyManager

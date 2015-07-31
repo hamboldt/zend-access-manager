@@ -4,6 +4,7 @@ namespace ZendAccessManager\Database\StrategyManager;
 
 use Collections\ArrayList;
 use ZendAccessManager\Database\StrategyManager\Exception\StrategyNotFoundException;
+use ZendAccessManager\Database\DataAccessStrategy\DataAccessStrategyInterface;
 
 /**
  * Interface StrategyManagerInterface

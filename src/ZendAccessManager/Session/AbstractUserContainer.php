@@ -3,6 +3,7 @@
 namespace ZendAccessManager\Session;
 
 use Zend\Session\Container;
+use ZendAccessManager\Authentication\User\AuthenticableUserInterface;
 
 /**
  * Class AbstractUserContainer
@@ -11,6 +12,11 @@ use Zend\Session\Container;
  */
 abstract class AbstractUserContainer extends Container implements UserContainerInterface
 {
+    /**
+     * @var AuthenticableUserInterface
+     */
+    private $user;
+
     /**
      * Construtor do container
      */
