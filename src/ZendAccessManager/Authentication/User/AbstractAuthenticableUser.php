@@ -9,7 +9,6 @@ namespace ZendAccessManager\Authentication\User;
  */
 abstract class AbstractAuthenticableUser implements AuthenticableUserInterface
 {
-
     /**
      * @var string
      */
