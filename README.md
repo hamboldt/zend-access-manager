@@ -7,8 +7,10 @@ Estrutura genérica de controle de acesso para o Zend Framework 2.
 
 ### Exemplo prático final
 
-```php
+Essa biblioteca foi desenvolvida para atender uma demanda de desenvolvedores que precisam
+adaptar
 
+```php
 class IndexController extends AbstractActionController
 {
   public function indexAction()
@@ -35,5 +37,4 @@ class IndexController extends AbstractActionController
     return $viewModel;
   }
 }
-
 ```
