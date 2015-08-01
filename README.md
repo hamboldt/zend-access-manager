@@ -8,7 +8,12 @@ Estrutura genérica de controle de acesso para o Zend Framework 2.
 ### Exemplo prático final
 
 Essa biblioteca foi desenvolvida para atender uma demanda de desenvolvedores que precisam
-adaptar
+adaptar seus sistemas para que exibam resultados diferentes, para contextos diferentes em
+requisições que são feitas em um mesmo ponto do sistema.
+
+A estrutura funciona basicamente como um switch. A requisição (contexto) é lida, e então
+avalia-se qual é a estratégia que se quer empregar naquela situação, então ela é empregada
+o resultado é construído e retornado para o cliente.
 
 ```php
 class IndexController extends AbstractActionController
