@@ -4,35 +4,36 @@ namespace Tests\ZendAccessManager\Database;
 
 /**
  * Class StrategyManagerTest
- * @author  Lucas A. de Araújo <lucas@painapp.com.br>
+ * @author  Lucas A. de AraÃºjo <lucas@painapp.com.br>
  * @package Tests\ZendAccessManager\Database
  */
 class StrategyManagerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     *
+     * Executa a seleÃ§Ã£o de estratÃ©gias de acordo com
+     * situaÃ§Ãµes prÃ©-definidas para contextos distintos.
      */
     public function testStrategySelection()
     {
-        // Cadastra os usuários, um no setor 1, e outro no setor 2.
-        // De acordo com a minha regra de negócio definida em minhas estratégias
-        // os usuários do setor 1 estarão disponíveis na ContextAStrategy e os
-        // usuário do setor 2 estarão acessíveis na ContextBStrategy.
+        // Cadastra os usuÃ¡rios, um no setor 1, e outro no setor 2.
+        // De acordo com a minha regra de negÃ³cio definida em minhas estratÃ©gias
+        // os usuÃ¡rios do setor 1 estarÃ£o disponÃ­veis na ContextAStrategy e os
+        // usuÃ¡rio do setor 2 estarÃ£o acessÃ­veis na ContextBStrategy.
         $table = new UsuarioTable();
-        $table->insert(['nome'   => 'Lucas', 'setor'  => '1']);
-        $table->insert(['nome'   => 'Lucas', 'setor'  => '2']);
+        $table->insert(['nome' => 'Lucas', 'setor' => '1']);
+        $table->insert(['nome' => 'Lucas', 'setor' => '2']);
 
-        // Obtém a estratégia que carrega os usuários do setor 1
+        // ObtÃ©m a estratÃ©gia que carrega os usuÃ¡rios do setor 1
         $strategy  = StrategyManager::getStrategyFor(0);
         $usuariosA = $strategy->getUsuarios();
-        var_dump($usuariosA->toArray()[0]);
         $this->assertEquals($usuariosA->count(), 1);
+        $this->assertEquals($usuariosA->toArray()[0]['setor'], '1');
 
-        // Obtém a estratégia que carrega os usuários do setor 2
+        // ObtÃ©m a estratÃ©gia que carrega os usuÃ¡rios do setor 2
         $strategy  = StrategyManager::getStrategyFor(1);
         $usuariosB = $strategy->getUsuarios();
-        var_dump($usuariosB->toArray()[0]);
         $this->assertEquals($usuariosB->count(), 1);
+        $this->assertEquals($usuariosB->toArray()[0]['setor'], '2');
 
         $table->delete(['nome' => 'Lucas']);
 

@@ -51,7 +51,7 @@ abstract class AbstractUserContainer extends Container implements UserContainerI
      */
     public function hasUser()
     {
-        return (is_null($this->user) == false);
+        return (is_null($this->user) === false);
     }
 
     /**
