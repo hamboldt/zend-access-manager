@@ -16,25 +16,22 @@ avalia-se qual é a estratégia que se quer empregar naquela situação, então 
 o resultado é construído e retornado para o cliente.
 
 ```php
-class IndexController extends AbstractActionController
+public function indexAction()
 {
-  public function indexAction()
-  {
-    // Definindo qual é o contexto ao qual a aplicação deverá
-    // Se adaptar para contruir o resultado apropriadamente.
-    $currentContext = $this->getRequest();
-    
-    // Obtém uma estratégia de acesso a dados passando qual é
-    // o contexto atual. Esse método deverá fazer o tratamento.
-    $dataAccessStrategy = DataStrategyManager::getStrategyFor($currentContext);
-    
-    // Acessa os dados utilizando a estratégia fornecida
-    $data = $dataAccessStrategy->fetchPartners();
-    
-    // Constrói o modelo visual
-    $viewModel = ViewStrategyManager:getStrategyFor($currentContext);
-    $viewModel->setVariable('partners', $data);
-    return $viewModel;
-  }
+  // Definindo qual é o contexto ao qual a aplicação deverá
+  // Se adaptar para contruir o resultado apropriadamente.
+  $currentContext = (new AuthContainer())->getUser()->getType();
+  
+  // Obtém uma estratégia de acesso a dados passando qual é
+  // o contexto atual. Esse método deverá fazer o tratamento.
+  $dataAccessStrategy = DataStrategyManager::getStrategyFor($currentContext);
+  
+  // Acessa os dados utilizando a estratégia fornecida
+  $data = $dataAccessStrategy->fetchPartners();
+  
+  // Constrói o modelo visual
+  $viewModel = ViewStrategyManager:getStrategyFor($currentContext);
+  $viewModel->setVariable('partners', $data);
+  return $viewModel;
 }
 ```
