@@ -5,6 +5,11 @@ namespace Tests\ZendAccessManager\Database;
 use ZendAccessManager\Database\StrategyManager\AbstractStrategyManager;
 use ZendAccessManager\Database\StrategyManager\Exception\StrategyNotFoundException;
 
+/**
+ * Class StrategyManager
+ * @author  Lucas A. de Araújo <lucas@painapp.com.br>
+ * @package Tests\ZendAccessManager\Database
+ */
 class StrategyManager extends AbstractStrategyManager
 {
 
@@ -27,6 +32,14 @@ class StrategyManager extends AbstractStrategyManager
     public static function getStrategyFor($context)
     {
         $sm = new StrategyManager();
-        return $sm->getStrategy($context);
+
+        switch($context)
+        {
+            case "ContextA":
+                return $sm->getStrategy(0);
+
+            case "ContextB":
+                return $sm->getStrategy(0);
+        }
     }
 }

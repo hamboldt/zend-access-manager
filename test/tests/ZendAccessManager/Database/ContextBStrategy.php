@@ -22,6 +22,9 @@ class ContextBStrategy extends AbstractDataAccessStrategy implements ContextStra
         $this->setTableGateway(new UsuarioTable());
     }
 
+    /**
+     * @return mixed
+     */
     public function getUsuarios()
     {
         return $this->getTableGateway()->select(function(Select $select){
