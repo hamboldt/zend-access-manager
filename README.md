@@ -31,13 +31,8 @@ class IndexController extends AbstractActionController
     // Acessa os dados utilizando a estratégia fornecida
     $data = $dataAccessStrategy->fetchPartners();
     
-    // Obtém a estratégia de exibição de dados que será
-    // aplicada ao ViewModel.
-    $dataDisplayStrategy = DisplayStrategyManager:getStrategyFor($currentContext);
-    
     // Constrói o modelo visual
-    $viewModel = new ViewModel();
-    $viewModel->setTemplate($dataDisplayStrategy->getTemplate());
+    $viewModel = ViewStrategyManager:getStrategyFor($currentContext);
     $viewModel->setVariable('partners', $data);
     return $viewModel;
   }
