@@ -4,6 +4,7 @@
 
 Estrutura genérica de controle de acesso para o Zend Framework 2.
 
+`composer require hamboldt/zend-access-manager`
 
 ### Exemplo prático final
 
