@@ -1,6 +1,6 @@
 # zend-access-manager
 
-[![Build Status](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/badges/build.png?b=master)](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/?branch=master)   [![Documentation Status](https://readthedocs.org/projects/zend-access-manager/badge/?version=latest)](https://readthedocs.org/projects/zend-access-manager/?badge=latest)
+[![Build Status](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/badges/build.png?b=master)](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hamboldt/zend-access-manager/?branch=master)
 
 
 Estrutura genérica de controle de acesso para o Zend Framework 2. Desenvolvida para atender 
