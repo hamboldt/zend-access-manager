@@ -3,14 +3,13 @@
 namespace ZendAccessManager\StrategyManager;
 
 use Collections\Dictionary;
-use StrategyManagerInterface;
 
 /**
  * Class AbstractStrategyManager
  * @author  Lucas A. de Araújo <lucas@painapp.com.br>
  * @package ZendAccessManager\StrategyManager
  */
-abstract class AbstractStrategyManager implements \ZendAccessManager\StrategyManager\StrategyManagerInterface
+abstract class AbstractStrategyManager implements StrategyManagerInterface
 {
     /**
      * @var Dictionary

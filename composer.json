@@ -23,7 +23,8 @@
     "easyframework/collections": "v4.0.0",
     "zendframework/zend-db": "2.5.1",
     "zendframework/zend-session": "2.5.2",
-    "zendframework/zend-mvc": "2.5.1"
+    "zendframework/zend-mvc": "2.5.1",
+    "zendframework/zend-view": "2.5.2"
   },
   "require-dev": {
     "php": ">=5.4.0",
