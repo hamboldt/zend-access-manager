@@ -4,6 +4,7 @@ namespace ZendAccessManager\StrategyManager;
 
 use Collections\Dictionary;
 
+
 /**
  * Interface StrategyManagerInterface
  * @author  Lucas A. de Araújo <lucas@painapp.com.br>
