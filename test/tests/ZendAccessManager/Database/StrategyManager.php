@@ -2,8 +2,7 @@
 
 namespace Tests\ZendAccessManager\Database;
 
-use ZendAccessManager\Database\StrategyManager\AbstractStrategyManager;
-use ZendAccessManager\Database\StrategyManager\Exception\StrategyNotFoundException;
+use ZendAccessManager\StrategyManager\AbstractStrategyManager;
 
 /**
  * Class StrategyManager
@@ -14,32 +13,22 @@ class StrategyManager extends AbstractStrategyManager
 {
 
     /**
-     * Configura as estratégias
-     * @return void
+     * Configura o StrategyManager. Aqui deverão ser adicionados
+     * os arquivos de configuração.
      */
-    public function setUpStrategies()
+    public function configure()
     {
-        $this->setStrategy(0, new ContextAStrategy());
-        $this->setStrategy(1, new ContextBStrategy());
+        $this->getDictionary()->add('ContextA', new ContextAStrategy());
+        $this->getDictionary()->add('ContextB', new ContextBStrategy());
     }
 
     /**
-     * Retorna uma estratégia adequada para um contexto específico.
+     * Busca uma estratégia para um determinado contexto.
      * @param $context
-     * @return ContextStrategyInterface
-     * @throws StrategyNotFoundException
+     * @return mixed
      */
-    public static function getStrategyFor($context)
+    public function getStrategyForContext($context)
     {
-        $sm = new StrategyManager();
-
-        switch($context)
-        {
-            case "ContextA":
-                return $sm->getStrategy(0);
-
-            case "ContextB":
-                return $sm->getStrategy(0);
-        }
+        return $this->getDictionary()->get($context);
     }
 }
