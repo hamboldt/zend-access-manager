@@ -8,3 +8,7 @@ uma demanda de desenvolvedores que precisam adaptar seus sistemas para que exiba
 diferentes, para contextos diferentes em requisições que são feitas em um mesmo ponto do sistema. 
 
 `composer require hamboldt/zend-access-manager`
+
+### Documentação
+
+* [Configuração de acesso a dados](https://github.com/hamboldt/zend-access-manager/wiki/Configura%C3%A7%C3%A3o-de-acesso-a-dados)
