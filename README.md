@@ -11,4 +11,6 @@ diferentes, para contextos diferentes em requisições que são feitas em um mes
 
 ### Documentação
 
+* [Criando usuário autenticável](https://github.com/hamboldt/zend-access-manager/wiki/Criando-usu%C3%A1rio-autentic%C3%A1vel)
 * [Configuração de acesso a dados](https://github.com/hamboldt/zend-access-manager/wiki/Configura%C3%A7%C3%A3o-de-acesso-a-dados)
+* [Configuração de ViewModels e templates](https://github.com/hamboldt/zend-access-manager/wiki/Configura%C3%A7%C3%A3o-de-ViewModels-e-templates)
