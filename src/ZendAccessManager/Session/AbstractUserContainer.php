@@ -60,7 +60,8 @@ abstract class AbstractUserContainer extends Container implements UserContainerI
      */
     public function removeUser()
     {
-        if(!$this->hasUser())
-            $this->user = null;
+        if(!$this->hasUser()) {
+                    $this->user = null;
+        }
     }
 }
