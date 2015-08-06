@@ -17,7 +17,7 @@ class ViewModelFactory
      * @param $template
      * @return  ViewModel
      */
-    public static function makeViewModelFromTemplate($template)
+    public static function make($template)
     {
         $viewModel = new ViewModel();
         $viewModel->setTemplate($template);

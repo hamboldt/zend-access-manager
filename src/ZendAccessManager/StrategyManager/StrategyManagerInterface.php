@@ -24,12 +24,6 @@ interface StrategyManagerInterface
     public function getDictionary();
 
     /**
-     * Define o dicionário de estratégias
-     * @param Dictionary $dictionary
-     */
-    public function setDictionary(Dictionary $dictionary);
-
-    /**
      * Adiciona uma estratégia no controlador de estratégias.
      *
      * @param $name Nome da estratégia

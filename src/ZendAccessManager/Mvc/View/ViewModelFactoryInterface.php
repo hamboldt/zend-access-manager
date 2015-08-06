@@ -13,5 +13,5 @@ interface ViewModelFactoryInterface
      * @param $template
      * @return  ViewModel
      */
-    public static function makeViewModelFromTemplate($template);
+    public static function make($template);
 }

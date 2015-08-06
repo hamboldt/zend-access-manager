@@ -35,15 +35,6 @@ abstract class AbstractStrategyManager implements StrategyManagerInterface
     }
 
     /**
-     * Define o dicionário de estratégias
-     * @param Dictionary $dictionary
-     */
-    public function setDictionary(Dictionary $dictionary)
-    {
-        $this->dictionary = $dictionary;
-    }
-
-    /**
      * Adiciona uma estratégia no controlador de estratégias.
      *
      * @param $name Nome da estratégia
@@ -51,7 +42,7 @@ abstract class AbstractStrategyManager implements StrategyManagerInterface
      */
     public function addStrategy($name, $strategies)
     {
-        $this->dictionary->add($name, $strategies);
+        $this->getDictionary()->add($name, $strategies);
     }
 
     /**
@@ -62,9 +53,9 @@ abstract class AbstractStrategyManager implements StrategyManagerInterface
      */
     public function getStrategy($name)
     {
-        if(!$this->dictionary->containsKey($name))
+        if(!$this->getDictionary()->containsKey($name))
             throw new StrategyNotFoundException();
 
-        return $this->dictionary->get($name);
+        return $this->getDictionary()->get($name);
     }
 }
